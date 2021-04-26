@@ -1,0 +1,26 @@
+# Path to dataset
+data_path: ../../cats_dogs_dataset
+
+# Data files paths processing config
+data_file_processing:
+  name: baseline
+  data_extension: jpg
+
+# Data extractor config
+data_extractor:
+  name: default
+
+# Dataset config
+dataset:
+  name: default
+  transforms: baseline
+  augmentations: transfer_resnet
+
+# Data loaders config
+dataloaders:
+  name: default
+  params:
+    validation_part: 0.3
+    train_batch: 16
+    val_batch: 16
+    seed: 1

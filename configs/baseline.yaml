@@ -1,0 +1,2 @@
+model_config: configs/architecture/baseline.yaml
+data_config: configs/data/dataset_baseline.yaml

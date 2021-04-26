@@ -1,0 +1,2 @@
+model_config: configs/architecture/transfer_resnet50.yaml
+data_config: configs/data/dataset_transfer_resnet50.yaml

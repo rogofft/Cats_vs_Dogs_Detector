@@ -1,0 +1,42 @@
+# ResNet50-based with 2 output dense layers detector
+model:
+  name: transfer_resnet50
+
+# Train algorithm
+trainer:
+  name: train_fine_tune
+
+# Custom loss config
+loss:
+  name: default
+  params:
+    class_weight:
+      - 1.
+      - 0.5
+
+# Optimizer config
+optimizer:
+  name: adam
+  params:
+    lr: 0.0003
+    amsgrad: True
+
+# Learning rate sheduler config
+lr_sheduler:
+  name: step_lr
+  params:
+    step_size: 20
+    gamma: 0.1
+
+# Early stop detector config
+early_stop:
+  name: default
+  params:
+    max_steps: 5
+    reverse: False
+
+# Max train epochs
+epochs: 100
+
+# Path to save model
+save_path: model

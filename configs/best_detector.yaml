@@ -1,0 +1,2 @@
+model_config: configs/architecture/best_detector.yaml
+data_config: configs/data/dataset_rpn.yaml
